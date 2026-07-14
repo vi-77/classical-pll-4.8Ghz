@@ -2,10 +2,7 @@
 
 The PFD compares the reference clock (`vref`) and the feedback clock (`vdiv`). It outputs `up` or `dn` pulses to tell the Charge Pump whether to speed up or slow down the VCO.
 
-### Schematic
-Here is the schematic of my PFD designed in GPDK 45nm:
 
-![PFD Schematic](../assets/pfd_schematic.png)
 
 ### How it Works
 1. **vref is faster:** The `up` signal goes HIGH. This tells the charge pump to increase the control voltage.
