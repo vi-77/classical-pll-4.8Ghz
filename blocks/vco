@@ -1,0 +1,13 @@
+# Voltage-Controlled Oscillator (VCO)
+
+The VCO is the heart of the PLL. It takes the analog control voltage (`vc`) from the loop filter and generates an oscillating output signal (`vout`) whose frequency changes based on that voltage.
+
+### Schematic
+Here is the schematic of my VCO designed in GPDK 45nm:
+
+![VCO Schematic](../assets/vco_schematic.png)
+
+### How it Works
+* **Frequency Tuning:** When the control voltage `vc` increases, it allows more current to flow through the oscillator's delay stages. This makes the internal nodes charge and discharge faster, which speeds up the oscillation frequency.
+* **Target Output:** At steady-state lock, the control voltage settles at the exact level needed to keep the output oscillating cleanly at **4.8 GHz**.
+* **Output Buffering:** The output of the oscillator core goes through inverter buffers. This isolates the sensitive oscillator core from the next block (the frequency divider) and ensures we get clean, full-swing digital clock pulses.
