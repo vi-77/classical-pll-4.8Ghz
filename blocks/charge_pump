@@ -2,10 +2,6 @@
 
 The Charge Pump (CP) takes the digital `up` and `dn` pulses from the PFD and converts them into physical current. This current charges or discharges the Loop Filter to change the control voltage (`vc`).
 
-### Schematic
-Here is the schematic of my Charge Pump designed in GPDK 45nm:
-
-![Charge Pump Schematic](../assets/cp_schematic.png)
 
 ### How it Works
 1. **When UP is active:** The top PMOS switch turns ON. Current flows *into* the loop filter, which increases `vc` and speeds up the VCO.
