@@ -2,10 +2,6 @@
 
 The Frequency Divider takes the high-speed 4.8 GHz clock output from the VCO (`vout`) and divides its frequency down to match the speed of the reference clock (`vref`).
 
-### Schematic
-Here is the schematic of my Frequency Divider designed in GPDK 45nm:
-
-![Frequency Divider Schematic](../assets/divider_schematic.png)
 
 ### How it Works
 * **Scaling Down:** Because standard digital gates cannot process extremely fast 4.8 GHz signals, the first few division stages use high-speed logic circuits to scale the frequency down step-by-step.
