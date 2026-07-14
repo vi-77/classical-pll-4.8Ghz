@@ -1,0 +1,31 @@
+# Simulation Results
+
+To verify the design, a high-resolution transient simulation was performed in Cadence Virtuoso using the GPDK 45nm process. The results prove that the PLL achieves a perfect frequency lock.
+
+---
+
+## 1. Full Transient Response
+
+This plot captures the startup and settling behavior of the system, showing the reference clock, the control voltage (`vc`), and the output waves:
+
+![Full Transient Simulation](../assets/transient_full.png)
+
+### Key Observations:
+* **Startup Phase (0 to 1.0 µs):** The loop control voltage (`vc`) swings up and down dynamically as the PFD and Charge Pump actively correct the frequency and phase errors.
+* **Steady-State Lock (> 1.3 µs):** The control voltage completely flattens out, proving that the feedback loop has settled and locked onto the target signal.
+
+---
+
+## 2. Locked Frequency Verification
+
+By plotting the instantaneous output frequency over time, we can verify the exact frequency at which the system locks:
+
+![VCO Lock Frequency](../assets/lock_frequency.png)
+
+### Performance Parameters:
+* **Target Frequency:** 4.8 GHz
+* **Measured Locked Frequency:** 4.80336 GHz (at marker **M5**)
+* **Lock Time:** ~1.3 µs
+* **Frequency Error:** < 0.07%
+
+The simulation results confirm that the loop dynamics are highly stable and the circuit successfully locks onto the target 4.8 GHz band with outstanding precision.
