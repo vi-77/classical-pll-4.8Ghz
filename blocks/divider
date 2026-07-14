@@ -1,0 +1,16 @@
+# Frequency Divider (N)
+
+The Frequency Divider takes the high-speed 4.8 GHz clock output from the VCO (`vout`) and divides its frequency down to match the speed of the reference clock (`vref`).
+
+### Schematic
+Here is the schematic of my Frequency Divider designed in GPDK 45nm:
+
+![Frequency Divider Schematic](../assets/divider_schematic.png)
+
+### How it Works
+* **Scaling Down:** Because standard digital gates cannot process extremely fast 4.8 GHz signals, the first few division stages use high-speed logic circuits to scale the frequency down step-by-step.
+* **The Lock Condition:** When the PLL is locked, the divided feedback clock matches the reference clock perfectly. This means:
+  
+  $$f_{out} = N \times f_{ref}$$
+
+  By setting the correct division ratio (N), we ensure that the VCO settles exactly on our target frequency of 4.8 GHz.
