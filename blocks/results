@@ -6,9 +6,9 @@ To verify the design, a high-resolution transient simulation was performed in Ca
 
 ## 1. Full Transient Response
 
-This plot captures the startup and settling behavior of the system, showing the reference clock, the control voltage (`vc`), and the output waves:
+This plot captures the startup and settling behavior of the system, showing the reference clock, the control voltage (`vc`), and the output waves.
 
-![Full Transient Simulation](../assets/transient_full.png)
+
 
 ### Key Observations:
 * **Startup Phase (0 to 1.0 µs):** The loop control voltage (`vc`) swings up and down dynamically as the PFD and Charge Pump actively correct the frequency and phase errors.
