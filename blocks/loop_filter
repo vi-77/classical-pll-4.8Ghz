@@ -2,10 +2,7 @@
 
 The Loop Filter is a passive low-pass network. It integrates the current pulses coming from the Charge Pump and smooths them into a stable DC control voltage (`vc`) to drive the VCO.
 
-### Schematic
-Here is the schematic of my 2nd-order passive Loop Filter designed in GPDK 45nm:
 
-![Loop Filter Schematic](../assets/lf_schematic.png)
 
 ### How it Works (Role of Components)
 Our design uses a classical 2nd-order passive loop filter:
