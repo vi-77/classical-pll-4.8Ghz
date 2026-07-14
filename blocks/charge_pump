@@ -3,7 +3,7 @@
 The Charge Pump (CP) takes the digital `up` and `dn` pulses from the PFD and converts them into physical current. This current charges or discharges the Loop Filter to change the control voltage (`vc`).
 
 ### Schematic
-Here is the schematic of my Charge Pump designed in GPDK 90nm:
+Here is the schematic of my Charge Pump designed in GPDK 45nm:
 
 ![Charge Pump Schematic](../assets/cp_schematic.png)
 
